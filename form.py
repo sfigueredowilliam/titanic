@@ -28,4 +28,4 @@ def calcula_imc(n_clicks, peso, altura):
     imc = peso / (altura ** 2)
     return f"O seu IMC é: {imc:.2f}"
         
-app.run_server(debug=True)
+app.run(debug=True)

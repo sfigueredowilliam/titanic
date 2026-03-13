@@ -33,4 +33,4 @@ def abre_pagina(pathname):
     else:
         return html.P("Página Inicial")
     
-app.run_server(debug=True)
+app.run(debug=True)
