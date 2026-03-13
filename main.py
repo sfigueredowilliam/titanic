@@ -3,6 +3,9 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 from pages import graficos, formulario
 from app import app
+import os
+from app import app
+
 
 navegacao = dbc.NavbarSimple(
     children=[
@@ -33,4 +36,6 @@ def abre_pagina(pathname):
     else:
         return html.P("Página Inicial")
     
-app.run(debug=True)
+
+port = int(os.environ.get("PORT", 10000))
+app.run(host="0.0.0.0", port=port, debug=False)
